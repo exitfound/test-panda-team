@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  web-server:
+    container_name: webserver-local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: webserver:local
+    restart: on-failure
+    ports:
+      - "8000:8000"
